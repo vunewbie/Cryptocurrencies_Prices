@@ -1,0 +1,23 @@
+FROM bitnami/spark:latest
+
+USER root
+
+RUN apt-get update && apt-get install -y \
+    python3-pip \
+    gcc \
+    librdkafka-dev \
+    && apt-get clean
+
+RUN pip3 install --no-cache-dir \
+    confluent-kafka \
+    pymongo \
+    pandas \
+    numpy \
+    python-dotenv \
+    websocket-client \
+    pymongo[srv]
+
+COPY ./src /app
+WORKDIR /app
+
+CMD ["tail", "-f", "/dev/null"]
