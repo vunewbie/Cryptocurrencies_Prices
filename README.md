@@ -17,8 +17,6 @@ This project implements a real-time ETL pipeline for cryptocurrency price analys
 ├── docker-compose.yml          # Docker services configuration
 ├── Dockerfile.pyspark         # Docker image for Spark
 ├── README.md                  # Guide
-├── docs/
-│   └── Report.pdf            # Project report
 └── src/                      # Main source code
     ├── .env                  # Environment variables
     ├── reset.sh             # Docker reset script
