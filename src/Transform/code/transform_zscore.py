@@ -249,9 +249,9 @@ def main():
     price_df = read_price_stream(spark)
     stats_df = read_moving_stats_stream(spark)
     
-    # Calculate Z-scores with Spark SQL and edge case handling
-    zscore_df = calculate_zscores(spark, price_df, stats_df)
-    output_df = format_zscore_output(spark, zscore_df)
+    # Calculate Z-scores with edge case handling
+    zscore_df = calculate_zscores(price_df, stats_df)
+    output_df = format_zscore_output(zscore_df)
 
     # Get absolute path to project root and create checkpoint path
     current_file = os.path.abspath(__file__)
