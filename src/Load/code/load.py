@@ -20,6 +20,7 @@ KAFKA_CONNECTOR = os.getenv("KAFKA_CONNECTOR")
 MONGO_URI = os.getenv("MONGO_URI")
 MONGO_DB = os.getenv("MONGO_DB")
 MONGO_COLLECTION_PREFIX = os.getenv("MONGO_COLLECTION_PREFIX")
+MONGO_CONNECTOR = os.getenv("MONGO_CONNECTOR")
 
 # Spark Configuration
 SPARK_MASTER_URL = os.getenv("SPARK_MASTER_URL")
@@ -36,7 +37,7 @@ def create_spark_session():
         .config("spark.sql.session.timeZone", SPARK_TIMEZONE) \
         .config("spark.hadoop.fs.defaultFS", SPARK_HADOOP_FS_DEFAULT) \
         .config("spark.sql.streaming.statefulOperator.checkCorrectness.enabled", SPARK_STATEFUL_OPERATOR_CHECK) \
-        .config("spark.jars.packages", f"{KAFKA_CONNECTOR},org.mongodb.spark:mongo-spark-connector_2.13:10.4.0") \
+        .config("spark.jars.packages", f"{KAFKA_CONNECTOR},{MONGO_CONNECTOR}") \
         .getOrCreate()
     spark.sparkContext.setLogLevel(SPARK_LOG_LEVEL)
     return spark

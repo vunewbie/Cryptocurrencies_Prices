@@ -3,7 +3,6 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from dotenv import load_dotenv
 import os
-import json
 
 load_dotenv()
 
@@ -187,7 +186,7 @@ def format_zscore_output(zscore_df):
         zscore_df: DataFrame with Z-score calculations for each window
         
     Returns:
-        DataFrame: Formatted output with JSON structure matching lab requirements
+        DataFrame: Formatted output with JSON structure
     """
     # Remove potential duplicates by taking max Z-score per window
     deduplicated_df = zscore_df \
