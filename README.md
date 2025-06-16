@@ -32,7 +32,7 @@ The pipeline consists of:
 - **Transform**: Moving averages and Z-score calculations using Spark Streaming
 - **Load**: Data persistence to MongoDB collections
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 22120384/
