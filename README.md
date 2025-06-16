@@ -42,7 +42,8 @@ The pipeline consists of:
 ├── README.md                  # This file
 ├── .gitignore                 # Git ignore rules
 ├── docs/
-│   └── Case Study.pdf         # Project documentation
+│   └── Case Study.pdf     
+|   └── Report.pdf         
 └── src/
     ├── .env                   # Environment variables
     ├── Extract/
