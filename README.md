@@ -35,7 +35,7 @@ The pipeline consists of:
 ## Project Structure
 
 ```
-Cryptocurrencies_prices/
+Cryptocurrencies_Prices/
 ├── docker-compose.yml          # Docker services configuration
 ├── Pipfile                     # Python dependencies
 ├── Pipfile.lock               # Locked dependencies
