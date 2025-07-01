@@ -40,10 +40,7 @@ Cryptocurrencies_prices/
 ├── Pipfile                     # Python dependencies
 ├── Pipfile.lock               # Locked dependencies
 ├── README.md                  # This file
-├── .gitignore                 # Git ignore rules
-├── docs/
-│   └── Case Study.pdf     
-|   └── Report.pdf         
+├── .gitignore                 # Git ignore rules        
 └── src/
     ├── .env                   # Environment variables
     ├── Extract/
@@ -158,8 +155,6 @@ docker exec -it kafka-broker /opt/kafka/bin/kafka-topics.sh \
 ## Configuration
 
 ### Project Source Configuration
-
-**If you obtained this project from OneDrive**: The `.env` file and `docs` folder are already included, so no additional configuration is needed.
 
 **If you cloned this project from GitHub**: You need to configure the `src/.env` file as follows:
 
