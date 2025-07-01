@@ -35,7 +35,7 @@ The pipeline consists of:
 ## Project Structure
 
 ```
-22120384/
+Cryptocurrencies_prices/
 ├── docker-compose.yml          # Docker services configuration
 ├── Pipfile                     # Python dependencies
 ├── Pipfile.lock               # Locked dependencies
@@ -47,19 +47,19 @@ The pipeline consists of:
 └── src/
     ├── .env                   # Environment variables
     ├── Extract/
-    │   ├── 22120384.py        # Extract entry point
+    │   ├── 22120439.py        # Extract entry point
     │   └── code/
     │       ├── __init__.py
     │       └── extract.py     # Price extraction from Binance
     ├── Transform/
-    │   ├── 22120384_moving.py # Moving averages entry point
-    │   ├── 22120384_zscore.py # Z-score entry point
+    │   ├── 22120439_moving.py # Moving averages entry point
+    │   ├── 22120439_zscore.py # Z-score entry point
     │   └── code/
     │       ├── __init__.py
     │       ├── transform_moving.py  # Moving averages implementation
     │       └── transform_zscore.py  # Z-score implementation
     └── Load/
-        ├── 22120384.py        # Load entry point
+        ├── 22120439.py        # Load entry point
         └── code/
             ├── __init__.py
             └── load.py        # Data loading to MongoDB
@@ -254,17 +254,17 @@ Run both transformation processes in separate terminals:
 
 **Moving Averages:**
 ```bash
-python3 Transform/22120384_moving.py
+python3 Transform/22120439_moving.py
 ```
 
 **Z-Score Calculations:**
 ```bash
-python3 Transform/22120384_zscore.py
+python3 Transform/22120439_zscore.py
 ```
 
 ### 3. Load Stage
 ```bash
-python3 Load/22120384.py
+python3 Load/22120439.py
 ```
 This consumes processed data from Kafka and stores it in MongoDB.
 
